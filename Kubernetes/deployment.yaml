@@ -13,7 +13,7 @@ spec:
         app: recommendation
     spec:
       containers:
-      - image: rsoairlines/fri-airlines-recommendation:0.0.1
+      - image: rsoairlines/fri-airlines-recommendation:0.0.2
         name: recommendation
         env:
         - name: KUMULUZEE_DISCOVERY_CLUSTER
