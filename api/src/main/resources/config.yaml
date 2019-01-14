@@ -9,7 +9,15 @@ kumuluzee:
       port: 8085
   datasources:
   - jndi-name: jdbc/fri_airline
-    connection-url: lala
-    username: postgres
-    password: pass
+    connection-url: ${KUMULUZEE_DATASOURCES0_CONNECTIONURL}
+    username: ${KUMULUZEE_DATASOURCES0_USERNAME}
+    password: ${KUMULUZEE_DATASOURCES0_PASSWORD}
     max-pool-size: 20
+  config:
+    etcd:
+      hosts: http://192.168.99.100:2379
+  discovery:
+    etcd:
+      hosts: http://192.168.99.100:2379
+    ttl: 30
+    ping-interval: 5
